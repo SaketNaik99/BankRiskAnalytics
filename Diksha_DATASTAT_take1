@@ -1,0 +1,191 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMn6t4Ev8f59eqio5/lWYiI"
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 17,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2BOgeutZkdSb",
+        "outputId": "47904bfa-f6ae-426f-8b5f-9c5ba6cbfd26"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "fatal: destination path 'BankRiskAnalytics' already exists and is not an empty directory.\n"
+          ]
+        }
+      ],
+      "source": [
+        "!git clone https://github.com/dikshadinesh/BankRiskAnalytics.git"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git status"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8zSkA5P9vHy4",
+        "outputId": "f71cbf05-7be6-44b9-db9e-eefd22fdec31"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "On branch main\n",
+            "Your branch is up to date with 'origin/main'.\n",
+            "\n",
+            "nothing to commit, working tree clean\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git branch -vv"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "i5RjBv97vK2b",
+        "outputId": "730e2d87-146c-4b63-9ddc-685093b68678"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "* \u001b[32mmain\u001b[m 038409b [\u001b[34morigin/main\u001b[m] Create README.md\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git remote -vv"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dlF1AsDSvSDJ",
+        "outputId": "038f8a1b-56cc-4108-845a-c740d149e21f"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "origin\thttps://github.com/dikshadinesh/BankRiskAnalytics.git (fetch)\n",
+            "origin\thttps://github.com/dikshadinesh/BankRiskAnalytics.git (push)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git remote add upstream https://github.com/SaketNaik99/BankRiskAnalytics.git"
+      ],
+      "metadata": {
+        "id": "1BL5SPmUvVIj"
+      },
+      "execution_count": 24,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git remote -vv"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "77HlivCWvbgK",
+        "outputId": "bb78ef05-462a-41b7-892d-d93c71423781"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "origin\thttps://github.com/dikshadinesh/BankRiskAnalytics.git (fetch)\n",
+            "origin\thttps://github.com/dikshadinesh/BankRiskAnalytics.git (push)\n",
+            "upstream\thttps://github.com/SaketNaik99/BankRiskAnalytics.git (fetch)\n",
+            "upstream\thttps://github.com/SaketNaik99/BankRiskAnalytics.git (push)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!git pull upstream main "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "LZXR_g9cvdxl",
+        "outputId": "f89b51b9-10b6-4971-faec-2293eb7d8c01"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "remote: Enumerating objects: 11, done.\u001b[K\n",
+            "remote: Counting objects:   9% (1/11)\u001b[K\rremote: Counting objects:  18% (2/11)\u001b[K\rremote: Counting objects:  27% (3/11)\u001b[K\rremote: Counting objects:  36% (4/11)\u001b[K\rremote: Counting objects:  45% (5/11)\u001b[K\rremote: Counting objects:  54% (6/11)\u001b[K\rremote: Counting objects:  63% (7/11)\u001b[K\rremote: Counting objects:  72% (8/11)\u001b[K\rremote: Counting objects:  81% (9/11)\u001b[K\rremote: Counting objects:  90% (10/11)\u001b[K\rremote: Counting objects: 100% (11/11)\u001b[K\rremote: Counting objects: 100% (11/11), done.\u001b[K\n",
+            "remote: Compressing objects:  12% (1/8)\u001b[K\rremote: Compressing objects:  25% (2/8)\u001b[K\rremote: Compressing objects:  37% (3/8)\u001b[K\rremote: Compressing objects:  50% (4/8)\u001b[K\rremote: Compressing objects:  62% (5/8)\u001b[K\rremote: Compressing objects:  75% (6/8)\u001b[K\rremote: Compressing objects:  87% (7/8)\u001b[K\rremote: Compressing objects: 100% (8/8)\u001b[K\rremote: Compressing objects: 100% (8/8), done.\u001b[K\n",
+            "remote: Total 10 (delta 2), reused 9 (delta 1), pack-reused 0\u001b[K\n",
+            "Unpacking objects:  10% (1/10)   \rUnpacking objects:  20% (2/10)   \rUnpacking objects:  30% (3/10)   \rUnpacking objects:  40% (4/10)   \rUnpacking objects:  50% (5/10)   \rUnpacking objects:  60% (6/10)   \rUnpacking objects:  70% (7/10)   \rUnpacking objects:  80% (8/10)   \rUnpacking objects:  90% (9/10)   \rUnpacking objects: 100% (10/10)   \rUnpacking objects: 100% (10/10), done.\n",
+            "From https://github.com/SaketNaik99/BankRiskAnalytics\n",
+            " * branch            main       -> FETCH_HEAD\n",
+            " * [new branch]      main       -> upstream/main\n",
+            "Updating 038409b..c41e825\n",
+            "Fast-forward\n",
+            " .gitignore                  |  4 \u001b[32m++++\u001b[m\n",
+            " BankRiskAnalyticsProj.Rproj | 13 \u001b[32m+++++++++++++\u001b[m\n",
+            " scratch.Rmd                 | 15 \u001b[32m+++++++++++++++\u001b[m\n",
+            " 3 files changed, 32 insertions(+)\n",
+            " create mode 100644 .gitignore\n",
+            " create mode 100644 BankRiskAnalyticsProj.Rproj\n",
+            " create mode 100644 scratch.Rmd\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
